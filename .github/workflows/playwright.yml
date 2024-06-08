@@ -20,4 +20,8 @@ jobs:
         run: |
           pip install -r requirements.txt
       - name: Run your tests
-        run: pytest -s -v
+        run: pytest -s -v --alluredir=reports
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: reports
