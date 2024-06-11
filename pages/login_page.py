@@ -17,7 +17,7 @@ class LoginPage:
         """Выполняет вход с заданными учетными данными."""
         self.username_input.fill(username)
         self.password_input.fill(password)
-        self.login_button.click()
+        self.login_button.type(username)
 
     def get_error_message(self):
         """Возвращает текст сообщения об ошибке."""
